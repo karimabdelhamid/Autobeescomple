@@ -1,0 +1,14 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Autobus Complete</title>
+</head>
+<body>
+    <h1>Welcome to Autobus Complete</h1>
+    <form action="{{ url_for('start_game') }}" method="post">
+        <input type="text" name="player_name" placeholder="Enter your name">
+        <input type="submit" value="Start Game">
+    </form>
+</body>

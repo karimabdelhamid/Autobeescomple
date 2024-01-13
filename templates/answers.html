@@ -1,0 +1,20 @@
+<!-- templates/answers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Answers</title>
+</head>
+<body>
+    <h1>Letter: {{ letter }}</h1>
+    <form action="{{ url_for('enter_answers') }}" method="post">
+        {% for category in categories %}
+        <div>
+            <label for="{{ category }}">{{ category }}</label>
+            <input type="text" id="{{ category }}" name="{{ category }}" required>
+        </div>
+        {% endfor %}
+        <input type="submit" value="Submit Answers">
+    </form>
+</body>
+</html>
